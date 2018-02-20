@@ -11,7 +11,7 @@
       <input type="radio" name="course" value="Dessert">Dessert<br>
       <input type="radio" name="course" value="Beverage">Beverage<br>
     <p><input type=submit value="Create"></p>
-    <p><a href="#">Cancel</a></p>
+    <p><a href="{{ url_for('showMenu', restaurant_id=restaurant.id) }}">Cancel</a></p>
   </form>
 </body>
 </html>

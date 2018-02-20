@@ -21,7 +21,7 @@ item =  {'name':'Cheese Pizza','description':'made with fresh cheese','price':'$
 
 @app.route('/')
 @app.route('/restaurants/')
-def allRestaurants():
+def showRestaurants():
     return render_template('restaurants.html', restaurants=restaurants)
 
 @app.route('/restaurants/new/')
@@ -38,7 +38,7 @@ def deleteRestaurant(restaurant_id):
 
 @app.route('/restaurants/<int:restaurant_id>/')
 @app.route('/restaurants/<int:restaurant_id>/menu/')
-def viewMenu(restaurant_id):
+def showMenu(restaurant_id):
     return render_template('menu.html', restaurant=restaurant, items=items)
 
 @app.route('/restaurants/<int:restaurant_id>/menu/new/')

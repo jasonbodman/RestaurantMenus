@@ -1,7 +1,7 @@
 <html>
 <body>
   <h1>Add a Menu Item</h1>
-  <form action="#" method='post'>
+  <form action="{{ url_for('newMenuItem', restaurant_id=restaurant.id) }}" method='post'>
     <p>Name: <input type=text size="30" name="name" placeholder="New Menu Item Name"></p>
     <p>Description: <input type='text' size="30" name="description" placeholder="New Menu Item Description"></p>
     <p>Price: <input type="text" size "30" name="price" placeholder="New Menu Item Price"></p>

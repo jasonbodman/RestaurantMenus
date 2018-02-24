@@ -13,7 +13,7 @@ You will need to have the following installed and setup on your computer:
 1. Download, clone, or fork this repository. 
 2. Navigate to the downloaded RestaurantMenus folder via terminal
 3. Launch Vagrant
-  -Execute '''vagrant up''' within terminal
-  -Execute '''vagrant ssh''' within terminal
+   -Execute '''vagrant up''' within terminal
+   -Execute '''vagrant ssh''' within terminal
 4. Execute ''' finalproject.py''' within terminal
 5. Navigate to '''localhost:5000/restaurants''' within web browser

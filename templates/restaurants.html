@@ -1,23 +1,42 @@
 <html>
+<head>
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css')}}">
+</head>
+
 <body>
-  <h1>Restaurants</h1>
+  <div class="menu">
+    <div class="header">
+      <h1>Restaurants</h1>
+    </div> <!--header-->
 
-  {% with messages = get_flashed_messages() %}
-    {% if messages %}
-      <ul>
-        {% for message in messages %}
-          <li><strong>{{ message }}</strong></li>
-        {% endfor %}
-      </ul>
-    {% endif %}
-  {% endwith %}
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <ul>
+            {% for message in messages %}
+              <li><strong>{{ message }}</strong></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      {% endwith %}
+      <div class="new">
+        <p><a href="{{ url_for('newRestaurant') }}">Create a new restaurant</a></p>
+      </div> <!--new div-->
 
-  <p><a href="{{ url_for('newRestaurant') }}">Create a new restaurant</a></p>
-  {% for i in restaurants %}
-    <h3><a href="{{ url_for('showMenu', restaurant_id=i.id) }}">{{i.name}}</a></h3>
-      <a href="{{ url_for('editRestaurant', restaurant_id=i.id) }}">Edit</a>
-      <br><a href="{{ url_for('deleteRestaurant', restaurant_id=i.id) }}">Delete</a></br>
-  {% endfor %}
+      {% for i in restaurants %}
+        <div class="section">
+          <div class="name">
+            <h3><a href="{{ url_for('showMenu', restaurant_id=i.id) }}">{{i.name}}</a></h3>
+          </div> <!--name div-->
+            <div class="interactive">
+              <a href="{{ url_for('editRestaurant', restaurant_id=i.id) }}">Edit</a>
+              <br><a href="{{ url_for('deleteRestaurant', restaurant_id=i.id) }}">Delete</a></br>
+            </div> <!--interactive div-->
+        </div>  <!--section class-->
+      {% endfor %}
+
+
+    </div> <!--header class-->
+  </div> <!--menu class-->
 
 
 </body>

@@ -1,73 +1,77 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  background-color: #3b475b;
+}
+
 body {
-    font-family: sans-serif;
-    background-color: #333333
-}
-
-h1,
-h2,
-h3,
-h4 {
-    color: #ffffff;
-}
-
-h1,
-h2 {
-    font-family: 'georgia', serif;
-    margin: 0;
-}
-
-h1 {
-    border-bottom: 2px solid #eee;
-}
-
-h2 {
-    font-size: 1.2em;
-}
-
-p,
-dd,
-dt {
-    color: #cccccc;
+  color: #FFFFCC;
 }
 
 a {
-    text-decoration: none;
-    color: #ffffcc;
-    font-size: .75em;
+  text-decoration: none; color:#FFFFCC; font-size: .75em;
 }
 
-.pane {
-    position: absolute;
-    left: 25%;
-    border: 2px solid;
-    border-radius: 25px;
-    padding: 5px;
-    margin: 5px;
-    border-color: #999999;
-    background-color: #333333
+/* Input Styling */
+
+input[type=text] {
+  background-color: #FFFFCC;
+  color: #3b475b;
+}
+
+input[type=button], input[type=submit] {
+  background-color: #FFFFCC;
+  color: #3b475b;
+}
+
+
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #FFFFCC;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #FFFFCC;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #FFFFCC;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #FFFFCC;
+}
+
+/* Menu Styling */
+
+.menu {
+  margin: auto;
+  text-decoration: none;
+  border: 5px solid #FFFFCC;
+  max-width: 600px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .header {
-    left: 50%;
-    text-align: center;
+  text-align: center;
+  border-bottom: 2px solid #FFFFCC;
 }
+
+.new {
+  text-align: right;
+}
+
+.section {
+  border-top: 2px solid #FFFFCC;
+  padding: 10px 0;
+  }
 
 .name {
-    width: 50%;
-    display: inline-block;
-    float: left;
 }
-
-.description {}
 
 .price {
-    text-align: right;
-    width: 50%;
-    float: right;
+  float: right;
 }
 
-.editdeletepane {}
-
-.flash {
-    background: #cee5f5;
+.interactive {
+  text-align: right;
+  padding-bottom: 10px;
 }

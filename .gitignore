@@ -1,3 +1,4 @@
 *.pyc
 staticfiles
 *.db
+.DS_Store

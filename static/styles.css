@@ -25,7 +25,7 @@ input[type=button], input[type=submit] {
 }
 
 
-
+/* Changes the color of placeholder text */
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #FFFFCC;
 }
@@ -51,8 +51,11 @@ input[type=button], input[type=submit] {
 }
 
 .header {
-  text-align: center;
   border-bottom: 2px solid #FFFFCC;
+}
+
+.header h1 {
+  text-align: center;
 }
 
 .new {
